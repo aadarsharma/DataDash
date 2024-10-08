@@ -1,4 +1,4 @@
-# DataDash
+# DataDash 📈
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ Ensure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/aadarsharma/DataDash.git
    ```
 
 2. **Backend Setup**
@@ -39,7 +39,7 @@ Ensure you have the following installed:
 
    - Navigate to the frontend directory:
      ```bash
-     cd ../frontend
+     cd frontend
      npm install
      ```
 
