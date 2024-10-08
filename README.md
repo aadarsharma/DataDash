@@ -1,59 +1,67 @@
-# roxiler-assignment
+# DataDash
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (version 14 or higher)
-- MongoDB (local or cloud instance)
+Ensure you have the following installed:
+
+- **Node.js** (version 14 or higher)
+- **MongoDB** (local or cloud instance)
 
 ### Environment Setup
 
-1. **Clone the repository:**
+1. **Clone the Repository**
+   ```bash
+   git clone <repository_url>
+   ```
 
-2. **Set up Backend:**
-   - Navigate to the backend folder:
+2. **Backend Setup**
+
+   - Navigate to the backend directory:
      ```bash
      cd backend
      npm install
      ```
-   - Create a `.env` file using the `.env.example` as a template:
+
+   - Copy the environment variable file template and configure it:
      ```bash
      cp .env.example .env
      ```
-   - Fill in the `.env` file:
-     ```
-     PORT=<your_port>
-     MONGO_URI=<your_mongo_uri>
+
+   - Open the `.env` file and fill in the following details:
+     ```bash
+     PORT=<your_preferred_port>
+     MONGO_URI=<your_mongo_connection_string>
      ```
 
-3. **Set up Frontend:**
-   - Navigate to the frontend folder:
+3. **Frontend Setup**
+
+   - Navigate to the frontend directory:
      ```bash
      cd ../frontend
      npm install
      ```
-   - Create a `.env` file using the `.env.example` as a template:
+
+   - Copy the environment variable file template and configure it:
      ```bash
      cp .env.example .env
      ```
-   - Fill in the `.env` file:
-     ```
+
+   - Open the `.env` file and update the following:
+     ```bash
      VITE_API_URL='http://localhost:5000/api/transactions'
      ```
 
 ### Running the Application
 
-1. **Start the development server:**
+1. **Start the Development Server**
 
-   In the root directory, run:
-
+   From the root directory, run the following command to start both the backend and frontend servers:
    ```bash
    npm run dev
    ```
 
-   This command will start both the backend and frontend applications.
-
 ### API Documentation
 
-- API documentation: [doc](./public/api.md)
+For detailed information about the API endpoints, refer to the documentation file [here](./public/api.md).
