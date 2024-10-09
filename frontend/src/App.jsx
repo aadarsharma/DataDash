@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [key, setKey] = useState(0); // Add a state for the key
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -16,10 +17,14 @@ const App = () => {
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
+    setKey((prevKey) => prevKey + 1); // Increment the key to force a re-render
   };
 
   return (
-    <div className="bg-slate-100 min-h-screen dark:bg-gray-900 p-8 transition-colors duration-500">
+    <div
+      key={key} // Use the key here to force a full re-render when it changes
+      className="bg-slate-100 min-h-screen dark:bg-gray-900 p-8 transition-colors duration-500"
+    >
       {/* Relative container for positioning the theme toggle */}
       <div className="relative mb-8">
         {/* Centering the heading */}
